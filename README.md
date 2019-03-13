@@ -6,7 +6,7 @@ Vinicius Garmatz;
 Willian;
 Rodrigo Wiebbelling;
 NomeDeVoces;
-Paulo Sar�ty;
+Paulo Sar;
 BrunoMuniz;
 Theo;
 Vinicius Garmatz;
