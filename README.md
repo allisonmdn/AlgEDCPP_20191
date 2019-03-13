@@ -10,6 +10,8 @@ Paulo Sar�ty;
 BrunoMuniz;
 Theo;
 Vinicius Garmatz;
+Rodrigo Wiebbelling;
+NomeDeVoces;
 Rodrigo Wiebbelling; 
 Andre Prado;
 Andrey;
@@ -17,6 +19,10 @@ Vinicius Gruske;
 leo;
 Felipe Ribeiro;
 Erivelto;
+Erivelto;
+Giovanne;
 Gabriel Coelho;
+luis fernando ferreira mesquita;
+Thiago LC;
 
 
