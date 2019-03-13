@@ -5,6 +5,7 @@ Raphael;
 Vinicius Garmatz;
 Rodrigo Wiebbelling;
 NomeDeVoces;
+Andre Prado;
 Andrey;
 Vinicius Gruske;
 leo;
