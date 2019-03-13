@@ -1,3 +1,4 @@
 # AlgEDCPP_20191
 Reposit√≥rio de Trabalho da Turma de Programa√ß√£o e Estrutura de Dados em C++
-Paulo Sar·ty
+
+Paulo Sar·ty;
