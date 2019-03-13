@@ -1,7 +1,11 @@
 # AlgEDCPP_20191
-RepositÃ³rio de Trabalho da Turma de ProgramaÃ§Ã£o e Estrutura de Dados em C++
+Repositório de Trabalho da Turma de Programação e Estrutura de Dados em C++
 Colaboradores:
 Raphael;
 Vinicius Garmatz;
 Willian;
-
+Rodrigo Wiebbelling;
+NomeDeVoces;
+Vinicius Gruske;
+leo;
+Erivelto;
