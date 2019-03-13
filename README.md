@@ -2,8 +2,12 @@
 Repositório de Trabalho da Turma de Programação e Estrutura de Dados em C++
 Colaboradores:
 Raphael;
-Vinicius Garmatz
-Raphael
+Vinicius Garmatz;
+Willian;
+Rodrigo Wiebbelling;
+NomeDeVoces;
+Paulo Sarï¿½ty;
+BrunoMuniz;
 Theo;
 Vinicius Garmatz;
 Rodrigo Wiebbelling;
@@ -15,4 +19,6 @@ Vinicius Gruske;
 leo;
 Erivelto;
 Giovanne;
+Gabriel Coelho;
+luis fernando ferreira mesquita;
 
