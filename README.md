@@ -5,7 +5,7 @@ Raphael;
 Vinicius Garmatz;
 Rodrigo Wiebbelling;
 NomeDeVoces;
-Paulo Saráty;
+Paulo Sarï¿½ty;
 BrunoMuniz;
 Theo;
 Vinicius Garmatz;
@@ -14,5 +14,5 @@ Andre Prado;
 Andrey;
 Vinicius Gruske;
 leo;
-Erivelto;
-Giovanne;
+Gabriel Coelho;
+
