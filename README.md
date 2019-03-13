@@ -2,4 +2,7 @@
 Repositório de Trabalho da Turma de Programação e Estrutura de Dados em C++
 Colaboradores:
 Raphael;
-Vinicius Garmatz
+Vinicius Garmatz;
+NomeDeVoces;
+
+
