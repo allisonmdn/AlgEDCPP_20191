@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlocDin", "AlocDin\AlocDin.vcxproj", "{B752AD9D-2264-4345-8586-8F9A505665BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Debug|x64.ActiveCfg = Debug|x64
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Debug|x64.Build.0 = Debug|x64
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Debug|x86.ActiveCfg = Debug|Win32
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Debug|x86.Build.0 = Debug|Win32
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Release|x64.ActiveCfg = Release|x64
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Release|x64.Build.0 = Release|x64
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Release|x86.ActiveCfg = Release|Win32
+		{B752AD9D-2264-4345-8586-8F9A505665BB}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FA3C642-1ECA-4E87-AC7E-56CE8D3FE423}
+	EndGlobalSection
+EndGlobal
