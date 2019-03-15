@@ -36,6 +36,7 @@ void main()
 		}
 	}
 
+	free(vetor);
 	system("pause");
 }
 
