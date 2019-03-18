@@ -24,12 +24,15 @@ int main()
 		std::cin >> ptrvetor[i];
 		
 	}
-  
+    // Devolvendo valores inseridos para o usuário (crescente)
 
 	for (i = 0; i < quantidade; i++) {
 		std::cout << ptrvetor[i] << std::endl;
 	}
-	for (i = quantidade; i >= 0; i--) {
+	std::cout << "- - - - - - - - - - - - - - - - - - -" << std::endl;
+
+	// Devolvendo valores inseridos para o usuário (decrescente)
+	for (i = quantidade-1; i >= 0; i--) {
 		std::cout << ptrvetor[i] << std::endl;
 	}
 }
