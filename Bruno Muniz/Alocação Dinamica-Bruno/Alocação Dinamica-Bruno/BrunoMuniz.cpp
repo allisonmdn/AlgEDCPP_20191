@@ -8,7 +8,7 @@ using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "ptb");
-	/*
+	
 
 	int qtd_nl, opcao;
 	int* vetor;
@@ -39,10 +39,10 @@ void main()
 			}
 		}
 		free(vetor);
-		*/
+		
 
 
-	/*
+	
 	//Bruno Muniz
 	//Exercicio 01
 	int p, q;
@@ -129,6 +129,6 @@ void main()
 		void ExibirValores();
 
 
-		*/
+		
 	system("pause");
 }
