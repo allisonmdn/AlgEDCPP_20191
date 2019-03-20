@@ -1,5 +1,6 @@
 #include<iostream>
 #include"ArrayInt.h"
+#include "Source.h"
 using namespace std;
 
 int main() {
@@ -106,14 +107,17 @@ int main() {
 	free(vet);*/
 
 	//Exercicio 4
-	ArrayInt array;
+	ArrayInt *array = new ArrayInt;
 	
-	array.tamanhoM(4);
-	array.preencherVetor();
-	array.realocar();
+	
+	array->tamanhoM(4);
+	array->preencherVetor();
+	array->mostrarValores();
+	array->realocar();
 	//array.addValor(4,6);
-	array.removerValor(4);
-	array.mostrarValores();
+	//array->removerValor(4);
+	array->mostrarValores();
+
 	
 
 	system("pause");

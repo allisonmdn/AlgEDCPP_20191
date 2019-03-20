@@ -6,7 +6,6 @@ using namespace std;
 
 ArrayInt::ArrayInt()
 {
-	vet = new int[tamanho];
 }
 
 
@@ -17,6 +16,8 @@ ArrayInt::~ArrayInt()
 int ArrayInt::tamanhoM(int tamanho)
 {	
 	this->tamanho = tamanho;
+
+	vet = new int[tamanho];
 
 	return tamanho;
 }
@@ -74,16 +75,33 @@ void ArrayInt::removerValor(int pos)
 
 int ArrayInt::realocar()
 {	
-	newTamanho = tamanho + 5;
+	int *vetAux = new int[tamanho];
+	for (int i = 0; i < tamanho; i++)
+	{
+		vetAux[i] = vet[i];
+	}
+	
+	delete[]vet;
 
-	for (int i = tamanho; i < newTamanho; i++)
+	this->vet = new int[tamanho + 5];
+
+	for (int i = 0; i < tamanho; i++)
+	{
+		this->vet[i] = vetAux[i];
+	}
+
+	cout << endl;
+
+	for (int i = tamanho; i < tamanho + 5; i++)
 	{
 		cout << "Digite numeros para preencher o vetor realocado ";
 		cin >> num;
-
 		vet[i] = num;
 	}
-		
+	
+	delete[]vetAux;
+
+	tamanho += 5;
 
 	return 0;
 }
@@ -111,23 +129,13 @@ int ArrayInt::obterValor()
 
 int ArrayInt::mostrarValores()
 {	
-	if (newTamanho > tamanho) {
 
-		cout << "Numeros do vetor realocado: ";
-		for (int i = 0; i < newTamanho; i++)
-		{
-			cout << vet[i] << " ";
-		}
-	}
-	
-	if(tamanho > newTamanho)
-	{
 		cout << "Numeros do vetor: ";
 		for (int i = 0; i < tamanho; i++)
 		{
 			cout << vet[i] << " ";
 		}
-	}
+
 	return 0;
 }
 
