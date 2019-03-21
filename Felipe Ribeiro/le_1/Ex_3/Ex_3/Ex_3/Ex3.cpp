@@ -33,15 +33,13 @@ int main()
 
 	// Expandindo o vetor
 
-	std::cout << " Quantas posições terá o novo vetor ? " << std::endl;
+	std::cout << " Quantas posicoes terá o novo vetor ? " << std::endl;
 	std::cin >> quantidade;
 
 	ptrvetor=(int*)realloc(ptrvetor,quantidade* sizeof(int));
 
 	std::cout << "Continue a preencher o vetor, insira o próximo valor ..." << std::endl;
 	std::cin >> quantidade;
-
-
 
 
 
