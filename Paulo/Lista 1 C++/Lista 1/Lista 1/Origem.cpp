@@ -1,5 +1,6 @@
 #include <iostream>
 #include <Windows.h>
+#include "ArrayInt.h"
 using namespace std;
 int main() {
 	//EX1
@@ -61,6 +62,9 @@ int main() {
 		printf("%d\n", vetorEX3[i]);
 	}
 
+	//EX4
+
+	cout << "\n\nEXERCICIO 4\n";
 
 
 	system("pause");
