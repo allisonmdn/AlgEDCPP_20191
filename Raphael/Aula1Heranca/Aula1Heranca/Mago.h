@@ -7,5 +7,6 @@ public:
 	Mago();
 	~Mago();
 	std::string quemSoul() override;
+	void defineNome(std::string s );
 };
 

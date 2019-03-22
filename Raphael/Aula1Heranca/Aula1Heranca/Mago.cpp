@@ -13,5 +13,12 @@ Mago::~Mago()
 
 std::string Mago::quemSoul()
 {
-	return "Mago";
+	
+	return Personagem::quemSoul();
 }
+
+void Mago::defineNome(std::string s)
+{
+	this->nome = Personagem::obtemLogin();
+}
+
