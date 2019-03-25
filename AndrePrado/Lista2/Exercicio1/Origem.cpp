@@ -2,6 +2,8 @@
 
 int main()
 {
+	srand(time(NULL));
+
 	Guerreiro guerreiro;
 
 	guerreiro.setNome("Arthur");

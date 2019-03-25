@@ -1,28 +1,26 @@
 #pragma once
 #include"includesBase.h"
-
-class Guerreiro
+class Mago
 {
 public:
-	Guerreiro();
-	~Guerreiro();
+	Mago();
+	~Mago();
 
-	void setNome(string n);
+	void setNome(string n) { nome = n; }
 
-	int getForca() { return forca; }
 	int getVida() { return pv; }
+	int getPM() { return pm; }
 	int getMovimento() { return mov; }
 	int getPosicao() { return posicao; }
 	string getClasse() { return classeNome; }
 	string getNome() { return nome; }
 
 	void mover();
-	void atacar(int caInimigo);
-
-	int defender(int ataqueInimigo);
+	void lancarMagia();
 
 private:
-	int pv, mov, ca, forca, posicao;
+	int pv, mov, ca, pm, posicao;
 	string nome, classeNome;
 };
+
 
