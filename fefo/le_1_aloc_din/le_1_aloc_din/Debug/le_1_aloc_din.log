@@ -1,0 +1,11 @@
+﻿  Origem.cpp
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(35): error C2144: erro de sintaxe: 'int' deve ser precedido por ';'
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(35): error C2040: 'vetor': 'int' difere em níveis de indireção de 'int [5]'
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(37): error C2088: '>>': inválido para class
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(46): error C2059: erro de sintaxe: ';'
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(46): error C2059: erro de sintaxe: ')'
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(47): error C2146: erro de sintaxe: ';' ausente antes do identificador 'cout'
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(18): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1272): note: consulte a declaração de 'scanf'
+c:\users\luisffmesquita\documents\github\algedcpp_20191\fefo\le_1_aloc_din\le_1_aloc_din\origem.cpp(33): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note: consulte a declaração de 'getch'
