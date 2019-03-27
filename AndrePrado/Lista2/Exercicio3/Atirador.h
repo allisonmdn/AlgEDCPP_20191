@@ -1,17 +1,19 @@
 #pragma once
-#include"Pistola.h"
-#include<string>
+#include"Armas.h"
 class Atirador
 {
 public:
 	Atirador();
 	~Atirador();
 
-	void disparar(Pistola nArma);
-	void recaregar(Pistola nArma);
+	void atirar();
+	void carrergar();
+	void trocarArma();
+	void medicar();
+	void usarArmadura();
 
 private:
-	bool vivo;
-	int vida;
+	Armas * armas[3]{ new Pistola(), new Carabina(), new Rifle() };
+	int armaAtual;
 };
 

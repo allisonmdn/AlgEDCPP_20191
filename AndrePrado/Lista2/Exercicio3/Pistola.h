@@ -1,19 +1,12 @@
 #pragma once
-#include"Atirador.h"
-#include"MunicaoPisto.h"
+#include"Armas.h"
 class Pistola :
-	public Atirador
+	public Armas
 {
 public:
 	Pistola();
 	~Pistola();
-
-	int getMunicao() { return municao; }
-
-	void reduzirMunicao() { municao--; }
-	
-
 private:
-	int municao, aux;
+	
 };
 
