@@ -24,8 +24,8 @@ std::string Guerreiro::treinar()
 
 std::string Guerreiro::lutar()
 {
-	defineEstamina(-3);
-	tomarDano();
+	std::cout << defineEstamina(-3) <<std::endl;
+	std::cout << tomarDano();
 	return "lutando";
 }
 
@@ -50,9 +50,9 @@ std::string Guerreiro::morre()
 std::string Guerreiro::tomarDano()
 {
 	if (escudo)
-		this->hp -= 5 / this->armadura;
+		this->hp -= 50; // this->armadura;
 	else
-		this->hp -= 10 / this->armadura;
+		this->hp -= 70; // this->armadura;
 	if (this->hp <= 0) {
 		morre();
 		return "tomou dano e morreu";
