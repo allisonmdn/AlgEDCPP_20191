@@ -112,6 +112,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AlocDin.cpp" />
+    <ClCompile Include="ArrayInt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArrayInt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
