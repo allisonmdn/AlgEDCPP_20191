@@ -4,6 +4,7 @@
 
 MRifle::MRifle()
 {
+	this->setProjeteis(1);
 }
 
 

@@ -4,6 +4,7 @@
 
 MCarabina::MCarabina()
 {
+	this->setProjeteis(2);
 }
 
 
