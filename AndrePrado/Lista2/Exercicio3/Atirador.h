@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include"Municao.h"
 #include"Carabina.h"
 #include"MCarabina.h"
@@ -12,6 +13,8 @@
 #include"MRifle.h"
 #include"KitMedico.h"
 
+=======
+>>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
 =======
 >>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
 =======
