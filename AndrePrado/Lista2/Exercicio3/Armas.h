@@ -1,6 +1,5 @@
 #pragma once
 #include"Municao.h"
-#include"FPS.h"
 class Armas
 {
 public:

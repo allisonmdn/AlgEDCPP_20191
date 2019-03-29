@@ -1,5 +1,6 @@
 #pragma once
 #include"Armas.h"
+<<<<<<< HEAD
 #include"Municao.h"
 #include"Carabina.h"
 #include"MCarabina.h"
@@ -9,6 +10,8 @@
 #include"MRifle.h"
 #include"KitMedico.h"
 
+=======
+>>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
 class Atirador
 {
 public:
@@ -22,8 +25,7 @@ public:
 	void usarArmadura();
 
 private:
-	Armas * armas[3]{new Pistola, new Carabina, new Rifle};
-	Municao * municao[3]{ new MPistola, new MCarabina, new MRifle };
-	int armaAtual, vida;
+	Armas * armas[3]{ new Pistola(), new Carabina(), new Rifle() };
+	int armaAtual;
 };
 

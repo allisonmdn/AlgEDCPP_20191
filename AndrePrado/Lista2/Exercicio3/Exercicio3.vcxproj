@@ -118,26 +118,16 @@
     <ClInclude Include="..\Exercicio1\KitMedico.h" />
     <ClInclude Include="Armas.h" />
     <ClInclude Include="Atirador.h" />
-    <ClInclude Include="Carabina.h" />
     <ClInclude Include="FPS.h" />
-    <ClInclude Include="MCarabina.h" />
-    <ClInclude Include="MPistola.h" />
-    <ClInclude Include="MRifle.h" />
     <ClInclude Include="Municao.h" />
     <ClInclude Include="Pistola.h" />
-    <ClInclude Include="Rifle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Exercicio1\KitMedico.cpp" />
     <ClCompile Include="Armas.cpp" />
     <ClCompile Include="Atirador.cpp" />
-    <ClCompile Include="Carabina.cpp" />
-    <ClCompile Include="MCarabina.cpp" />
-    <ClCompile Include="MPistola.cpp" />
-    <ClCompile Include="MRifle.cpp" />
     <ClCompile Include="Municao.cpp" />
     <ClCompile Include="Pistola.cpp" />
-    <ClCompile Include="Rifle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
