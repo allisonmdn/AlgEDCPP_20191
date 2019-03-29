@@ -1,13 +1,5 @@
 #pragma once
 #include"Armas.h"
-#include"Municao.h"
-#include"Carabina.h"
-#include"MCarabina.h"
-#include"Pistola.h"
-#include"MPistola.h"
-#include"Rifle.h"
-#include"MRifle.h"
-#include"KitMedico.h"
 class Atirador
 {
 public:
