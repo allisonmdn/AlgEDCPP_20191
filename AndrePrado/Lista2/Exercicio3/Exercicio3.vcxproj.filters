@@ -32,6 +32,7 @@
     </ClInclude>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="MCarabina.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
@@ -54,6 +55,8 @@
 >>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
 =======
 >>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
+=======
+>>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Atirador.cpp">
@@ -68,6 +71,7 @@
     <ClCompile Include="Municao.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <ClCompile Include="MCarabina.cpp">
@@ -88,6 +92,8 @@
     <ClCompile Include="..\Exercicio1\KitMedico.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+=======
+>>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
 =======
 >>>>>>> parent of 1f32a97... Lista2Exercicio3V2.1
 =======
