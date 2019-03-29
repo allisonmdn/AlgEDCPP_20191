@@ -7,6 +7,7 @@
 #include"MPistola.h"
 #include"Rifle.h"
 #include"MRifle.h"
+#include"KitMedico.h"
 
 class Atirador
 {
