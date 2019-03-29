@@ -44,6 +44,5 @@
     <ClCompile Include="Municao.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-
   </ItemGroup>
 </Project>
