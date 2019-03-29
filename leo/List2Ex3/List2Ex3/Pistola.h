@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include "Arma.h"
-class Pistola :
-	public Arma
+
+class Pistola : public Arma
 {
 public:
 	Pistola();

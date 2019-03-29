@@ -1,8 +1,7 @@
 #pragma once
-#include "Arma.h"
 
-class Municao :
-	public Arma
+
+class Municao
 {
 public:
 	Municao();

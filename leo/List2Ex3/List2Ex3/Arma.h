@@ -4,7 +4,7 @@
 #include "MunicaoPistola.h"
 #include "MunicaoRifle.h"
 #include "MunicaoCarabina.h"
-#include "Atirador.h"
+//#include "Atirador.h"
 
 
 using namespace std;
@@ -19,8 +19,8 @@ public:
 
 protected:
 	int pente = 0;
-	Municao *municoes[3]{ new MunicaoPistola, new MunicaoRifle, new MunicaoCarabina };
-	Atirador *leo2 = new Atirador;
+	Municao * municoes[3]{ new MunicaoPistola, new MunicaoRifle, new MunicaoCarabina };
+	//Atirador *leo2 = new Atirador();
 
 };
 
