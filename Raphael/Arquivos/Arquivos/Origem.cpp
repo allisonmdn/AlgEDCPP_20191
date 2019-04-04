@@ -30,6 +30,6 @@ void main() {
 	std::string linha_col1, linha_col2;
 	iarquivo >> linha_col1 >> linha_col2;
 	std::cout << linha_col1 << " " << linha_col2 << std::endl;
-	iarquivo.close();
+	iarquivo.close(); 
 	system("pause");
 }
