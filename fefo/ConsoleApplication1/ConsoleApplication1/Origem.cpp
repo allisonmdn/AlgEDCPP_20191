@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Guerreiro.h"
-
+#include "stdafx.h"
+#include <iostream>
 
 void main() 
 {
