@@ -1,0 +1,5 @@
+10
+mapa1
+2 2
+l1c1 l1c2
+Theodoro Ilha Gorck
