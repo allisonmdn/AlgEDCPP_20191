@@ -1,0 +1,3 @@
+spritesheet Knight ../assets/spritesheets/knight.png 4 4
+spritesheet Thief ../assets/spritesheets/thief.png 4 4
+spritesheet Mage ../assets/spritesheets/mage.png 4 4
