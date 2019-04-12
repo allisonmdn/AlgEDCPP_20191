@@ -34,10 +34,5 @@ int main() {
 	}
 
 	system("pause");
-
-	//EX2
-	cout << "EX2" << endl;
-
-
 	return 0;
 }
