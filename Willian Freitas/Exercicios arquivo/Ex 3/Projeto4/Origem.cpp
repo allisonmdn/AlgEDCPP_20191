@@ -34,7 +34,7 @@ int main()
 		}
 	}
 
-	ofstream arquivo("inventario.txt");
+	ofstream arquivo("inventario.txt", std::ios::binary);
 	for (i; i < 50 && pesoTotal < 60;) {
 		cout << "acao";
 		cin >> acao;
@@ -84,7 +84,7 @@ int main()
 			arquivo << array[j].tipo;
 			arquivo << " ";
 			arquivo << array[j].peso;
-			arquivo << " ";
+			arquivo << endl;
 		}
 	}
 
