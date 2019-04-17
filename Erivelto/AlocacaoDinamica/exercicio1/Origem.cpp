@@ -27,7 +27,7 @@ int main()
 	}
 
 
-	delete Ptro;
+	delete[] Ptro;
 
 
 

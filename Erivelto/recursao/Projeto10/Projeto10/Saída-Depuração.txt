@@ -1,0 +1,22 @@
+﻿"Projeto10.exe" (Win32): Carregado "C:\Users\Erivelto93\source\repos\Projeto10\Debug\Projeto10.exe". Símbolos carregados.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\ntdll.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\kernel32.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Não carregado "C:\Windows\SysWOW64\kernel32.dll"
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\kernel32.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\KernelBase.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\apphelp.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\msvcp140d.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\vcruntime140d.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\ucrtbased.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\kernel.appcore.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\msvcrt.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\rpcrt4.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\sspicli.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\cryptbase.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\bcryptprimitives.dll". Não é possível localizar ou abrir o arquivo PDB.
+"Projeto10.exe" (Win32): Carregado "C:\Windows\SysWOW64\sechost.dll". Não é possível localizar ou abrir o arquivo PDB.
+O thread 0x2abc foi fechado com o código 0 (0x0).
+O thread 0x1aac foi fechado com o código 0 (0x0).
+O thread 0x2f38 foi fechado com o código 0 (0x0).
+O thread 0x2878 foi fechado com o código 0 (0x0).
+O programa "[9184] Projeto10.exe" foi fechado com o código 0 (0x0).
