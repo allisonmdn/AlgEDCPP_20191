@@ -1,0 +1,24 @@
+ID: 0
+Nome: DE.50
+Tipo: Pistola
+Peso: 40
+ID: 1
+Nome: Combat Knife
+Tipo: Melee
+Peso: 15
+ID: 3
+Nome: Erva Verde
+Tipo: Cura
+Peso: 10
+ID: 4
+Nome: Erva Azul
+Tipo: Cura
+Peso: 15
+ID: 5
+Nome: Erva Vermelha
+Tipo: Cura
+Peso: 20
+ID: 5
+Nome: Chave da porta
+Tipo: Item
+Peso: 5
