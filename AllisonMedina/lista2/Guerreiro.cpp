@@ -4,6 +4,11 @@
 
 Guerreiro::Guerreiro()
 {
+	this->forca = 10;
+	this->agilidade = 1;
+	this->vitalidade = 10;
+	this->inteligencia = 1;
+	this->destreza = 1;
 }
 
 
@@ -24,13 +29,7 @@ void Guerreiro::Caminhar()
 }
 
 void Guerreiro::Atributos()
-{
-	this->forca = 10;
-	this->agilidade = 1;
-	this->vitalidade = 10;
-	this->inteligencia = 1;
-	this->destreza = 1;
-	
+{	
 	std::cout << "For: " << forca << "\n";
 	std::cout << "Agi: " << agilidade << "\n";
 	std::cout << "Vit: " << vitalidade << "\n";
@@ -55,42 +54,42 @@ void Guerreiro::Defender()
 
 void Guerreiro::executar()
 {
-	//std::cout << "classe: " << classe << "\n";
-
+		
+	std::cout << "classe: " << classe << "\n";
 	this->Atributos();
 	
-	//classeEscolhida();
-
-	
 		std::cout << "PARA VOLTAR, DIGITE [0]\n";
-
-		if (mov == 'z')
+				
+		if (mov = _getch() == 'z')
 		{
 			this->Atacar();
 		}
-		else if (mov == 'c')
+		if (mov = _getch() == 'c')
 		{
 			this->Defender();
 		}
-		else if (mov == '1')
+		if (mov = _getch() == '1')
 		{
 			this->AvancoPesado();
 		}
-		else if (mov == '2')
+		if (mov = _getch() == '2')
 		{
 			this->AumentarForca();
 		}
+		
 	
+		
+		
 		
 }
 
 void Guerreiro::classeEscolhida()
 {
 	std::cout << "Escolha uma classe: [1] Guerreiro\n";
-	op_classe = std::cin.get();
+	std::cin >> op_classe;
 	switch (op_classe)
 	{
-	case 1:classe = "Guerreiro\n";
+	case '1':classe = "Guerreiro\n";
 		break;
 	default: std::cout << "Classe indefinida\n";
 		

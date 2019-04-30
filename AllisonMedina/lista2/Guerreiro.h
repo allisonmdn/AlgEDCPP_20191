@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <conio.h>
 
 class Guerreiro
 {
@@ -18,7 +19,7 @@ public:
 private:
 
 	int forca, agilidade, vitalidade, inteligencia, destreza;
-	char mov = std::cin.get();
+	char mov;
 	void AvancoPesado();
 	void AumentarForca();
 	std::string classe;
