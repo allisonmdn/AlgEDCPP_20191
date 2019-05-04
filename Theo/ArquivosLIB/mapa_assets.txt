@@ -1,0 +1,4 @@
+SPRITE 1 
+hue baldricSlashSheet.png 4 6
+
+
