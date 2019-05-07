@@ -1,23 +1,25 @@
 #include <iostream>
-#include <stdlib.h>
-#include <string>
+#include <vector>
 
 using namespace std;
 
 int main() {
 
-	int num;
+	int *vetor = new int[5];
+	int resp;
 
-	int *vetor = (int*)calloc(10, sizeof(int));
+	for (int i = 0; i < 5; i++) {
+		cout << "Digite um numero:" << endl;
+		cin >> resp;
 
-	vetor = (int *)realloc(vetor, 15 * sizeof(int));
+		vetor[i] = resp;
+	}
 
-	cin >> num;
+	for (int i = 0; i < 5; i++) {
+		cout << endl << vetor[i] << endl;
+	}
 
-	cout << num << endl;
-
-	free(vetor);
-
+	delete vetor;
 
 	system("pause");
 	return 0;
