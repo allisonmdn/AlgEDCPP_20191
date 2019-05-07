@@ -1,0 +1,5 @@
+Faça um programa que leia uma agenda de nomes e as respectivas datas de aniversário de um
+conjunto de pessoas. Estes dados devem ser armazenados num array de registros. O programa
+deve ler tantos dados quanto o usuário desejar fornecer, mas limitando a um máximo de 50
+registros. Salvar em disco nos formatos binário e no formato texto. Compare o tamanho dos 2
+arquivos. Qual a economia em espaço em disco com o arquivo binário? 
