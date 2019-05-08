@@ -42,20 +42,35 @@ int ListaItens::removeItem(int ID)
 	else
 	{
 		Itens *percorreLista = inicioLista;
+		Itens *anteriorPercorreLista = inicioLista;
 		if (percorreLista != nullptr)
 		{
-			percorreLista = percorreLista->proxima;
-			comprimentoLista++;
-
-			if (comprimentoLista == 1 || percorreLista->ID == ID)
+			while (percorreLista->proxima != nullptr)
 			{
-				percorreLista = nullptr;
-			}
-			else
-			{
+				//Caso primeiro elemento da lista
+				if (percorreLista == inicioLista && percorreLista->ID == ID)
+				{
+					inicioLista = percorreLista->proxima;
+					delete percorreLista;
+					return 1;
+				}
+				//Caso último elemento ou elemento do meio
+				else if(comprimentoLista > 1 && percorreLista->ID == ID)
+				{
+					anteriorPercorreLista->proxima = percorreLista->proxima;
+					delete percorreLista;
+					return 1;
+				}
+				//Caso não encontrar nenhum elemento
+				else
+				{
+					anteriorPercorreLista = percorreLista;
+					percorreLista = percorreLista->proxima;
+					comprimentoLista++;
 
+					return 0;
+				}
 			}
-			
 		}
 	}
 	return 0;
@@ -70,7 +85,7 @@ int ListaItens::contarItens()
 	else
 	{
 		Itens *percorreLista = inicioLista;
-		if (percorreLista != nullptr)
+		while (percorreLista != nullptr)
 		{
 			percorreLista = percorreLista->proxima;
 			comprimentoLista++;
@@ -88,7 +103,7 @@ Itens * ListaItens::buscarItemPorID(int ID)
 	else
 	{
 		Itens *percorreLista = inicioLista;
-		if (percorreLista->ID != ID && percorreLista != nullptr)
+		while (percorreLista != nullptr)
 		{
 			percorreLista = percorreLista->proxima;
 

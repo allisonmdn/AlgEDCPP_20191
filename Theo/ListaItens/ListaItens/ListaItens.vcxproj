@@ -115,6 +115,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Itens.cpp" />
+    <ClCompile Include="ListaItens.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Itens.h" />
+    <ClInclude Include="ListaItens.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
