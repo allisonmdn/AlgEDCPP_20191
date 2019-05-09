@@ -17,7 +17,7 @@ entregas_listas_atrasadas  exe3
 LISTA RECURSIVIDADE
 
 BRANCH
-entregas_listas_atrasadas exe3 exe1
+entregas_listas_atrasadas exe3 exe2 exe1
 
 
 
