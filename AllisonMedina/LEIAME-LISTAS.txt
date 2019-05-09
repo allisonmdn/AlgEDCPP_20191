@@ -1,0 +1,23 @@
+LISTA 1
+
+BRANCH
+master exe1+exe2(mesmo arquivo)
+
+BRANCH
+entregas_listas_atrasadas exe3
+
+LISTA 2
+
+BRANCH
+master  exe1 exe2
+
+BRANCH
+entregas_listas_atrasadas  exe3
+
+LISTA RECURSIVIDADE
+
+BRANCH
+entregas_listas_atrasadas exe3
+
+
+
