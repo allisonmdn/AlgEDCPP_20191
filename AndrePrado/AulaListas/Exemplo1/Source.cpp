@@ -12,7 +12,7 @@ int main() {
 	p2->id = 2;
 
 	Pessoa * p3 = new Pessoa;
-	p2->id = 3;
+	p3->id = 3;
 
 	int ID; //= 3;
 	char opcao = 'm';

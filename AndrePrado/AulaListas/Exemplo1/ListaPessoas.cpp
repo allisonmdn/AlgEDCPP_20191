@@ -14,14 +14,14 @@ ListaPessoas::~ListaPessoas()
 
 int ListaPessoas::inserePessoa(Pessoa *p)
 {
-	if (inicioLista == nullptr)
+	if (inicioLista == nullptr) {
 		inicioLista = p;
-
+	}
 	else {
 		Pessoa * percorreLista = inicioLista;
 		while (percorreLista->proxima != nullptr)
 		{
-			percorreLista = percorreLista->proxima;
+			percorreLista = percorreLista->proxima;		
 		}
 		percorreLista->proxima = p;
 	}
