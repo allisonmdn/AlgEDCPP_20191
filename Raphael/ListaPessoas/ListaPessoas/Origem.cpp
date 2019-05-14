@@ -11,6 +11,9 @@ void main() {
 	Pessoa * p2 = new Pessoa;
 	p2->id = 2;
 
+	Pessoa * p3 = new Pessoa;
+	p3->id = 3;
+
 	lp_listaPessoas.inserePessoa(p1);
 	lp_listaPessoas.inserePessoa(p2);
 

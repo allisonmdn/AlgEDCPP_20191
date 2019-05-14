@@ -55,6 +55,7 @@ int ListaPessoas::contarPessoas()
 Pessoa * ListaPessoas::buscaPessoaPorID(int id)
 {
 	this->contarPessoas();
+	return nullptr;
 }
 
 Pessoa * ListaPessoas::consultaPessoas()
