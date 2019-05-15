@@ -12,10 +12,13 @@ int main() {
 	pessoa1->i_idade = 40;
 	
 	////adicionar esta pessoa no nó.
-	//n_no = new No;
-	//n_no->pessoa = pessoa1;
-	//n_no->proximo = nullptr;
-	//l_lista->insereFimLista(n_no);
+	No * n_no = new No;
+	n_no->info = pessoa1;
+	n_no->proximo = nullptr;
+
+	//Declarar a lista
+	Lista * l_lista = new Lista;
+	l_lista->insereFimLista(n_no);
 	////adicionar o nó na lista
 	//n_lista_pessoas = n_no;
 	
