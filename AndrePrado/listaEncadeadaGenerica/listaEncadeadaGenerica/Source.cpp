@@ -1,11 +1,20 @@
 #include <iostream>
+#include<string>
 #include "No.h"
 #include "ListaPessoas.h"
 #include "Lista.h"
 
 int main() {
 	ListaPessoas * lp_lista_pessoas = new ListaPessoas();
-	
+	No<Pessoa*> * no_pessoa = new No<Pessoa *>;
+	No<int> * no_int = new No<int>;
+	No<std::string> * no_s = new No<std::string>;
+
+	//Declar lista
+	Lista<int> * listaInt = new Lista<int>;
+	Lista<float> * listaFloat = new Lista<float>;
+	Lista<Pessoa> * listaPessoa = new Lista<Pessoa>;
+
 	// Definição de uma pessoa
 	Pessoa * pessoa1;
 	pessoa1 = new Pessoa;
