@@ -43,7 +43,7 @@ void Lista<T>::percorreLista(No<T> * lista)
 	}
 }
 template <class T>
-void Lista<T>::insereFimLista(No<T> * no)
+void Lista<T>::insereFimLista(T * no)
 {
 	if (this->lista == nullptr) { //se é vazia
 		this->lista = no;//insere o primeiro elemento

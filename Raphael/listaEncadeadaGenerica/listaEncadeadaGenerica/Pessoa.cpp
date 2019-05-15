@@ -19,4 +19,5 @@ bool Pessoa::operator==(Pessoa p)
 bool Pessoa::operator<(Pessoa p)
 {
 	return this->i_idade < p.i_idade;
+
 }
