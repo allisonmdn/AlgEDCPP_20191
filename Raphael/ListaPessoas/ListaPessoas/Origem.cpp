@@ -16,10 +16,19 @@ void main() {
 
 	lp_listaPessoas.inserePessoa(p1);
 	lp_listaPessoas.inserePessoa(p2);
+	lp_listaPessoas.inserePessoa(p3);
 
 	std::cout << "Comprimento Lista = " << lp_listaPessoas.contarPessoas()
 		<< std::endl;
 
-	std::cout << "Pessoa Id = " << lp_listaPessoas.buscaPessoaPorID(2)->id; 
+	if (lp_listaPessoas.removePessoa(4))
+		std::cout << "encontrou e removeu" << std::endl;
+	else
+		std::cout << "Não Encontrou" << std::endl;
+
+
+	Pessoa * p = lp_listaPessoas.buscaPessoaPorID(3);
+	if (p != nullptr)
+		std::cout << "Pessoa Id = " << p->id << std::endl; 
 	system("pause");
 }
