@@ -8,11 +8,11 @@ public:
 	~Lista();
 	No<T> * lista, *lista_aux;
 	void percorreLista(No<T> * lista);
-	void insereFimLista(No<T> * no);
-	void inserirInicioLista(No<T> * no);
+	void insereFimLista(T * elemento); //@todo: modificar
+	void inserirInicioLista(No<T> * no);//@todo: modificar
 	bool removeUltimoNo(No<T> * lst);
 	T * removePrimeiroNo();
-	void insereEm(int posicao, No<T> * no);
+	void insereEm(int posicao, No<T> * no); //@todo: modificar
 	int obtemTamanhoLista();
 	bool listaVazia();//true = vazia; false = não vazia
 	void esvaziaLista();
@@ -43,8 +43,11 @@ void Lista<T>::percorreLista(No<T> * lista)
 	}
 }
 template <class T>
-void Lista<T>::insereFimLista(T * no)
+void Lista<T>::insereFimLista(T * elemento)
 {
+	No<T> * no = new No<T>;
+	no->info = elemento;
+	no->proximo = nullptr;
 	if (this->lista == nullptr) { //se é vazia
 		this->lista = no;//insere o primeiro elemento
 		this->tam++;
@@ -142,7 +145,7 @@ void Lista<T>::esvaziaLista()
 	}
 }
 template<class T>
-bool Lista<T>::contemNaLista(const No<T> no, No<T> * param_lista)
+bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista)
 {
 	//recebe o nó
 	//percorre a lista até encontrar o nó
