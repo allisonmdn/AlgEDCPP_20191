@@ -76,8 +76,7 @@ void Lista<T>::inserirInicioLista(T * elemento)
 	if (!listaVazia()) {
 		no->proximo = lista;
 		lista = no;
-		// = no;
-		this->fim_lista = no->proximo;
+		lista->anterior = no;
 		tam++;
 	}
 	else { //->Se a lista tiver vazia ele já adiciona na primeira posicao
@@ -111,10 +110,13 @@ void Lista<T>::insereEm(int posicao, T * elemento)
 						//@todo insereInicioLista ou push_front
 						no->proximo = this->lista;
 						this->lista = no;
+						lista->anterior = no;
 					}
 					else {
 						no->proximo = this->lista_aux;
 						no_ant->proximo = no;
+						lista_aux->anterior = no;
+						no->anterior = no_ant;
 					}
 				}
 				this->tam++;
@@ -122,6 +124,7 @@ void Lista<T>::insereEm(int posicao, T * elemento)
 			//atualiza o nó anterior
 			no_ant = this->lista_aux;
 			this->lista_aux = this->lista_aux->proximo;
+			//Fim da lista será o lista_aux?
 			i++;
 		}
 	}
@@ -172,11 +175,21 @@ bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista
 		if (param_lista->info == no.info)
 			return true;
 		else
-			return contemNaLista(no, param_lista->proximo);
+			return contemNaLista(elemento, param_lista->proximo);
 	}
 	return false;
 
 }
+
+template<class T>
+inline void Lista<T>::percorreFimLista(No<T>* fim_Lista)
+{
+	if (fim_Lista != nullptr) {
+		lista_aux = fim_Lista;
+		percorreLista(fim_Lista->anterior);
+	}
+}
+
 template <class T>
 bool Lista<T>::removeUltimoNo(No<T> * lst) {
 	if (lst != nullptr) {
