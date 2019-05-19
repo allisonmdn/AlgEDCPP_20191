@@ -8,7 +8,6 @@ public:
 	Lista();
 	~Lista();
 
-	bool listaVazia();
 	int tamanhoLista() { return tamanho; }
 	void inserirFimLista(T * conteudo);
 	void inserirInicioLista(T * conteudo);
@@ -16,9 +15,16 @@ public:
 	void removerFimLista();
 	void removerInicioLista();
 	void esvaziarLista();
+	Noh<T> * obterFimLista() { return fimLista; }
+	Noh<T> * obterInicioLista() { return inicioLista; }
+	Noh<T> * obterEm(int posicao);
+	bool listaVazia();
+	bool contemNaLista(T * conteudo);
+
+
 
 private:
-	Noh<T> * inicioLista, * listaAuxiliar;
+	Noh<T> * inicioLista, *listaAuxiliar, *fimLista;
 	int tamanho;
 };
 
@@ -49,18 +55,15 @@ void Lista<T>::inserirFimLista(T * conteudo)
 	if (listaVazia())
 	{
 		inicioLista = noh;
+		fimLista = noh;
 		tamanho++;
 	}
 	else
 	{
-		listaAuxiliar = inicioLista;
-
-		while (listaAuxiliar->getProximoNoh() != nullptr)
-		{
-			listaAuxiliar = listaAuxiliar->getProximoNoh();
-		}
-
-		listaAuxiliar->setProximoNoh(noh);
+		listaAuxiliar = fimLista;
+		fimLista = noh;
+		fimLista->setAnterior(listaAuxiliar);
+		listaAuxiliar->setProximo(noh);
 		tamanho++;
 	}
 }
@@ -73,11 +76,13 @@ void Lista<T>::inserirInicioLista(T * conteudo)
 	if (listaVazia())
 	{
 		inicioLista = noh;
+		fimLista = noh;
 		tamanho++;
 	}
 	else
 	{
-		noh->setProximoNoh(inicioLista);
+		noh->setProximo(inicioLista);
+		inicioLista->setAnterior(noh);
 		inicioLista = noh;
 		tamanho++;
 	}
@@ -86,26 +91,29 @@ void Lista<T>::inserirInicioLista(T * conteudo)
 template<class T>
 void Lista<T>::inserirEm(T * conteudo, int posicao)
 {
-	Noh<T> * noh = new Noh<T>(conteudo);
-
 	if (posicao == tamanho)
 	{
 		inserirFimLista(conteudo);
 	}
 	else if (posicao == 0)
 	{
-		inserirInicioLista(0);
+		inserirInicioLista(conteudo);
 	}
 	else if (posicao < tamanho)
 	{
+		Noh<T> * noh = new Noh<T>(conteudo);
 		listaAuxiliar = inicioLista;
 
-		for (int i = 0; i < tamanho - 1; i++)
+		for (int i = 0; i < posicao; i++)
 		{
-			listaAuxiliar = listaAuxiliar->getProximoNoh();
+			listaAuxiliar = listaAuxiliar->getProximo();
 		}
-		noh->setProximoNoh(listaAuxiliar->getProximoNoh());
-		listaAuxiliar->setProximoNoh(noh);
+
+		listaAuxiliar->getAnterior()->setProximo(noh);
+		noh->setAnterior(listaAuxiliar->getAnterior());
+		noh->setProximo(listaAuxiliar);
+		listaAuxiliar->setAnterior(noh);
+
 		tamanho++;
 	}
 }
@@ -115,22 +123,17 @@ void Lista<T>::removerFimLista()
 {
 	if (!listaVazia())
 	{
-		listaAuxiliar = inicioLista;
-
-		if (listaAuxiliar->getProximoNoh() == nullptr)
+		if (fimLista->getAnterior() == nullptr)
 		{
-			delete listaAuxiliar;
-			inicioLista = nullptr;
+			delete fimLista;
+			inicioLista = fimLista = nullptr;
 			tamanho--;
 		}
 		else
 		{
-			while (listaAuxiliar->getProximoNoh()->getProximoNoh() != nullptr)
-			{
-				listaAuxiliar = listaAuxiliar->getProximoNoh();
-			}
-			delete listaAuxiliar->getProximoNoh();
-			listaAuxiliar->setProximoNoh(nullptr);
+			listaAuxiliar = fimLista->getAnterior();
+			delete fimLista;
+			fimLista = listaAuxiliar;
 			tamanho--;
 		}
 	}
@@ -141,15 +144,15 @@ void Lista<T>::removerInicioLista()
 {
 	if (!listaVazia())
 	{
-		if (inicioLista->getProximoNoh() == nullptr)
+		if (inicioLista->getProximo() == nullptr)
 		{
 			delete inicioLista;
-			inicioLista = nullptr;
+			inicioLista = fimLista = nullptr;
 			tamanho--;
 		}
 		else
 		{
-			listaAuxiliar = inicioLista->getProximoNoh();
+			listaAuxiliar = inicioLista->getProximo();
 			delete inicioLista;
 			inicioLista = listaAuxiliar;
 			tamanho--;
@@ -163,9 +166,49 @@ void Lista<T>::esvaziarLista()
 	listaAuxiliar = inicioLista;
 	while (listaAuxiliar != nullptr)
 	{
-		listaAuxiliar = inicioLista->getProximoNoh();
+		listaAuxiliar = inicioLista->getProximo();
 		delete inicioLista;
 		inicioLista = listaAuxiliar;
 	}
 	tamanho = 0;
+}
+
+template<class T>
+Noh<T> * Lista<T>::obterEm(int posicao)
+{
+	if (posicao == tamanho - 1)
+	{
+		return obterFimLista();
+	}
+	else if (posicao == 0)
+	{
+		return obterInicioLista();
+	}
+	else if (posicao < tamanho)
+	{
+		listaAuxiliar = inicioLista;
+
+		for (int i = 0; i < posicao; i++)
+		{
+			listaAuxiliar = listaAuxiliar->getProximo();
+		}
+
+		return listaAuxiliar;
+	}
+	return nullptr;
+}
+
+template<class T>
+bool Lista<T>::contemNaLista(T * conteudo)
+{
+	listaAuxiliar = inicioLista;
+	while (listaAuxiliar != nullptr)
+	{
+		if (listaAuxiliar->getConteudo() == conteudo)
+		{
+			return true;
+		}
+		listaAuxiliar = listaAuxiliar->getProximo();
+	}
+	return false;
 }

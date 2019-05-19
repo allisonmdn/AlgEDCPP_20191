@@ -4,25 +4,29 @@ template <class T>
 class Noh
 {
 public:
-	Noh(T * c, Noh<T> * p = nullptr);
+	Noh(T * c, Noh<T> * p = nullptr, Noh<T> * a = nullptr);
 	~Noh();
 
 	void setConteudo(T * c) { conteudo = c; }
-	void setProximoNoh(Noh<T> * p) { proximoNoh = p; }
+	void setProximo(Noh<T> * p) { proximo = p; }
+	void setAnterior(Noh<T> * a) { anterior = a; }
 
 	T * getConteudo() { return conteudo; }
-	Noh<T> * getProximoNoh() { return proximoNoh; }
+	Noh<T> * getProximo() { return proximo; }
+	Noh<T> * getAnterior() { return anterior; }
 
 private:
 	T * conteudo;
-	Noh<T> * proximoNoh;
+	Noh<T> * proximo;
+	Noh<T> * anterior;
 };
 
 template<class T>
-Noh<T>::Noh(T * c, Noh<T> * p)
+Noh<T>::Noh(T * c, Noh<T> * p, Noh<T> * a)
 {
 	conteudo = c;
-	proximoNoh = p;
+	proximo = p;
+	anterior = a;
 }
 
 template <class T>

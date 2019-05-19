@@ -31,9 +31,32 @@ void main()
 	listaInt.removerFimLista();
 	listaInt.removerFimLista();
 	listaInt.removerFimLista();
-	listaInt.inserirEm(&i1, 0);
-	listaInt.inserirEm(&i1, 1);
-	listaInt.inserirEm(&i1, 1);
+	listaInt.inserirEm(&i2, 0);
+	listaInt.inserirEm(&i4, 1);
+	listaInt.inserirEm(&i3, 1);
+	listaInt.inserirEm(&i2, 1);
+
+	for (int i = 0; i < 5; i++)
+	{
+		if (listaInt.obterEm(i) == nullptr)
+		{
+			cout << "NULL" << endl;
+		}
+		else
+		{
+			cout << *listaInt.obterEm(i)->getConteudo() << endl;
+		}
+	}
+
+	if (listaInt.contemNaLista(&i1))
+	{
+		cout << "Contém na Lista" << endl;
+	}
+	else
+	{
+		cout << "Não contém na Lista" << endl;
+	}
+
 
 	if (listaInt.listaVazia())
 	{
