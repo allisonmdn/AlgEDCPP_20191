@@ -18,6 +18,10 @@ public:
 	void esvaziaLista();
 	bool contemNaLista(const T elemento, No<T> * param_lista);
 	void percorreFimLista(No<T> * fim_Lista);
+	T* obterUltimoElemento();
+	T* obterPrimeiroElemento();
+	T* obterElementoEm(int posicao);
+	T* mostrarElementosLista();
 	//bool removerNo(const No<T> no);
 	//int obtemPosicao(No<T> no);
 
@@ -188,6 +192,24 @@ inline void Lista<T>::percorreFimLista(No<T>* fim_Lista)
 		lista_aux = fim_Lista;
 		percorreLista(fim_Lista->anterior);
 	}
+}
+
+template<class T>
+inline T * Lista<T>::obterUltimoElemento()
+{
+	return fim_lista->info;
+}
+
+template<class T>
+inline T * Lista<T>::obterPrimeiroElemento()
+{
+	return lista->info;
+}
+
+template<class T>
+inline T * Lista<T>::obterElementoEm(int posicao)
+{
+	return NULL;
 }
 
 template <class T>
