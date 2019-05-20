@@ -212,6 +212,12 @@ inline T * Lista<T>::obterElementoEm(int posicao)
 	return NULL;
 }
 
+template<class T>
+inline T * Lista<T>::mostrarElementosLista()
+{
+	return NULL;
+}
+
 template <class T>
 bool Lista<T>::removeUltimoNo(No<T> * lst) {
 	if (lst != nullptr) {
