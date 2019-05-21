@@ -109,6 +109,10 @@ void Lista<T>::insereEm(int posicao, T * elemento)
 	No<T> * no = new No<T>;
 	no->info = elemento;
 	int i = 0;
+	No<T> * no_ant = nullptr;
+	//inicializa o ponteiro para percorrer a lista
+	this->lista_aux = this->lista;
+	no_ant = this->lista;
 	//inicializa o ponteiro para percorrer a lista
 	this->lista_aux = this->lista;
 	no_ant = this->lista;
