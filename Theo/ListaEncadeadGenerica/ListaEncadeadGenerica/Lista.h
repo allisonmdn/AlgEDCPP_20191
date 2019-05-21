@@ -51,7 +51,6 @@ void Lista<T>::insereFimLista(T * elemento)
 {
 	No<T> *no = new No<T>;
 	no->info = elemento; //O elemento serve para indiciar o conteúdo do no, mas o que realmente é inserido na lista é o no(com o conteudo?);
-	no->proximo = nullptr;
 
 	if (this->lista == nullptr) { //se é vazia
 		this->lista = no;//insere o primeiro elemento
@@ -67,7 +66,7 @@ void Lista<T>::insereFimLista(T * elemento)
 		//lista_aux aponta para o último nó da lista
 		this->lista_aux->proximo = no; //atribui novo nó
 		no->anterior = lista_aux;
-		this->fim_lista = lista_aux->proximo;
+		this->fim_lista = no;
 		this->tam++;
 	}
 }
@@ -85,6 +84,7 @@ void Lista<T>::inserirInicioLista(T * elemento)
 	}
 	else { //->Se a lista tiver vazia ele já adiciona na primeira posicao
 		lista = no;
+		fim_lista = lista;
 		tam++;
 	}
 }
@@ -128,7 +128,10 @@ void Lista<T>::insereEm(int posicao, T * elemento)
 			//atualiza o nó anterior
 			no_ant = this->lista_aux;
 			this->lista_aux = this->lista_aux->proximo;
-			//Fim da lista será o lista_aux?
+			if (lista_aux->proximo == nullptr)
+			{
+				fim_lista = lista_aux;
+			}
 			i++;
 		}
 	}
@@ -159,6 +162,7 @@ void Lista<T>::esvaziaLista()
 			this->lista_aux = this->lista->proximo;
 			//segundo passo: deletar o nó
 			delete this->lista;
+			//delete this->lista->anterior; //Precisa???
 			//terceiro passo: atualizar a lista para o próximo nó
 			this->lista = this->lista_aux;
 		}
@@ -197,25 +201,62 @@ inline void Lista<T>::percorreFimLista(No<T>* fim_Lista)
 template<class T>
 inline T * Lista<T>::obterUltimoElemento()
 {
-	return fim_lista->info;
+	if (lista != nullptr)
+	{
+		return fim_lista->info;
+	}
 }
 
 template<class T>
 inline T * Lista<T>::obterPrimeiroElemento()
 {
-	return lista->info;
+	if (lista != nullptr)
+	{
+		return lista->info;
+	}
 }
 
 template<class T>
 inline T * Lista<T>::obterElementoEm(int posicao)
 {
+	int i = 0;
+
+	if (posicao <= tam)
+	{
+		while (i <= posicao)
+		{
+			if (i == posicao)
+			{
+				if (listaVazia())
+				{
+					return NULL;
+				}
+				else
+				{
+					if (posicao == 0)
+					{
+						return lista->info;
+					}
+					else
+					{
+						//lista_aux->info;?
+					}
+				}
+			}
+			else
+			{
+				i++;
+			}
+		}
+	}
 	return NULL;
 }
 
 template<class T>
 inline T * Lista<T>::mostrarElementosLista()
 {
-	return NULL;
+	/*percorreLista(lista);
+	return lista;*/
 }
 
 template <class T>
@@ -235,7 +276,6 @@ bool Lista<T>::removeUltimoNo(No<T> * lst) {
 		}
 	}
 	return false;
-
 }
 
 template<class T>
