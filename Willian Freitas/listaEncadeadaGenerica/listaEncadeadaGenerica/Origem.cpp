@@ -22,7 +22,7 @@ int main() {
 	deux->s_nome = "DEUX";
 	deux->i_idade = 0;
 
-	std::cout << (listaPessoas->finalLista->info->s_nome) << std::endl;
+	std::cout << (listaPessoas->getUltimoElemento()->s_nome) << std::endl;
 
 
 

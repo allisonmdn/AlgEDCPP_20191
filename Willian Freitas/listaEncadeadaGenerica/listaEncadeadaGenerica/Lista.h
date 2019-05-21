@@ -17,6 +17,8 @@ public:
 	int obtemTamanhoLista();
 	bool listaVazia();//true = vazia; false = não vazia
 	void esvaziaLista();
+	T * getPrimeiroElemento() { return lista->info; }
+	T * getUltimoElemento() { return finalLista->info; }
 	bool contemNaLista(const T elemento, No<T> * param_lista);
 	//bool removerNo(const No<T> no);
 	//int obtemPosicao(No<T> no);
@@ -49,7 +51,7 @@ void Lista<T>::percorreListaInverso(No<T> * lista)
 {
 	if (lista != nullptr) {
 		lista_aux = lista;
-		percorreLista(lista->anterior);
+		percorreListaInverso(lista->anterior);
 	}
 }
 
@@ -92,13 +94,13 @@ void Lista<T>::inserirInicioLista(T * elemento)
 		lista = no;
 		tam++;
 		lista->anterior = nullptr;
-		finalLista = no;
 	}
 	else {
 		lista = no;
 		tam++;
 		lista->anterior = nullptr;
 		lista->proximo = nullptr;
+		finalLista = no;
 	}
 }
 template <class T>
