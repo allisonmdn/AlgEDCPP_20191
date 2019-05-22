@@ -6,8 +6,9 @@ class Lista
 public:
 	Lista();
 	~Lista();
-	No<T> * lista, *lista_aux;
+	No<T> * lista, *lista_aux, *fim_lista, *inicio_lista;
 	void percorreLista(No<T> * lista);
+	void percorreListaInverso(No<T> * lista);
 	void insereFimLista(T * elemento); //@todo: modificar
 	void inserirInicioLista(T * elemento);//@todo: modificar
 	bool removeUltimoNo(No<T> * lst);
@@ -26,30 +27,43 @@ protected:
 
 
 template <class T>
-Lista<T>::Lista()
-{
+Lista<T>::Lista(){
 	this->tam = 0;
 }
+
 template <class T>
-Lista<T>::~Lista()
-{
+Lista<T>::~Lista(){
 }
+
 template <class T>
-void Lista<T>::percorreLista(No<T> * lista)
-{
+void Lista<T>::percorreLista(No<T> * lista){
 	if (lista != nullptr) {
 		lista_aux = lista;
 		percorreLista(lista->proximo);
 	}
 }
+
+template<class T>
+void Lista<T>::percorreListaInverso(No<T>* lista){
+	if (lista != nullptr) {
+		lista_aux = lista;
+		percorreListaInverso(lista->anterior);
+	}
+}
+
+
 template <class T>
-void Lista<T>::insereFimLista(T * elemento)
-{
+void Lista<T>::insereFimLista(T * elemento){
+
 	No<T> * no = new No<T>;
 	no->info = elemento;
 	no->proximo = nullptr;
+
 	if (this->lista == nullptr) { //se é vazia
 		this->lista = no;//insere o primeiro elemento
+		lista->anterior = nullptr;
+		lista->proximo = nullptr;
+		fim_lista = no;
 		this->tam++;
 	}
 	else {
@@ -60,29 +74,38 @@ void Lista<T>::insereFimLista(T * elemento)
 		}
 		//lista_aux aponta para o último nó da lista
 		this->lista_aux->proximo = no; //atribui novo nó
+		no->anterior = lista_aux;
+		no->proximo = nullptr;
 		this->tam++;
+		fim_lista = no;
 	}
 }
+
 template<class T>
-void Lista<T>::inserirInicioLista(T* elemento)
-{
+void Lista<T>::inserirInicioLista(T* elemento){
 
 	No<T> * no = new No<T>;
 	no->info = elemento;
 
+
 	if (!listaVazia()) {
+		lista->anterior = no;
 		no->proximo = lista;
 		lista = no;
 		tam++;
+		lista->anterior = nullptr;
 	}
 	else {
 		lista = no;
+		lista->anterior = nullptr;
+		lista->proximo = nullptr;
+		no->anterior = no;
 		tam++;
 	}
 }
+
 template <class T>
-void Lista<T>::insereEm(int posicao, T * elemento)
-{
+void Lista<T>::insereEm(int posicao, T * elemento){
 
 	No<T> * no = new No<T>;
 	no->info = elemento;
@@ -100,12 +123,14 @@ void Lista<T>::insereEm(int posicao, T * elemento)
 				//atualiza o nó
 				if (listaVazia()) {
 					insereFimLista(no);
+					fim_lista = no;
 				}
 				else {
 					if (posicao == 0) {
 						//@todo insereInicioLista ou push_front
 						no->proximo = this->lista;
 						this->lista = no;
+						lista_anterior = no;
 					}
 					else {
 						no->proximo = this->lista_aux;
@@ -124,22 +149,22 @@ void Lista<T>::insereEm(int posicao, T * elemento)
 		//posicao inválida
 	}
 }
+
 template <class T>
-int Lista<T>::obtemTamanhoLista()
-{
+int Lista<T>::obtemTamanhoLista(){
 	return this->tam;
 }
+
 template <class T>
-bool Lista<T>::listaVazia()
-{
+bool Lista<T>::listaVazia(){
 	if (this->lista == nullptr)
 		return true;
 	else
 		return false;
 }
+
 template <class T>
-void Lista<T>::esvaziaLista()
-{
+void Lista<T>::esvaziaLista(){
 	if (this->lista != nullptr) {
 		this->lista_aux = this->lista;
 		while (this->lista_aux != nullptr) {
@@ -152,9 +177,9 @@ void Lista<T>::esvaziaLista()
 		}
 	}
 }
+
 template<class T>
-bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista)
-{
+bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista){
 	//recebe o nó
 	//percorre a lista até encontrar o nó
 	//pra cada nó comparar a info que contém o tipo T, ou a informação desejada
@@ -169,14 +194,14 @@ bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista
 	return false;
 
 }
+
 template <class T>
-bool Lista<T>::removeUltimoNo(No<T> * lst) {
+bool Lista<T>::removeUltimoNo(No<T> * lst){
 	if (lst != nullptr) {
 		if (lst->proximo != nullptr) {
 			this->lista_aux = lst;
 			lista = lst->proximo;
 			percorreLista(lista);
-
 		}
 		else {
 			//cheguei no último elemento
@@ -186,12 +211,10 @@ bool Lista<T>::removeUltimoNo(No<T> * lst) {
 		}
 	}
 	return false;
-
 }
 
 template<class T>
-T * Lista<T>::removePrimeiroNo()
-{
+T * Lista<T>::removePrimeiroNo(){
 	T * info = nullptr;
 	if (!listaVazia()) {
 		lista_aux = lista;
