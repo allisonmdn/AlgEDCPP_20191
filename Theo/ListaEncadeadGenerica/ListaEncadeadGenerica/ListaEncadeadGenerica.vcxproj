@@ -111,11 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Fila.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="No.h" />
     <ClInclude Include="Pessoa.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Fila.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
