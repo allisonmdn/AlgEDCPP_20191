@@ -16,9 +16,10 @@ public:
 	int obtemTamanhoLista();
 	bool listaVazia();//true = vazia; false = não vazia
 	void esvaziaLista();
-	bool contemNaLista(const No<T> no, No<T> * param_lista);
-	//bool removerNo(const No<T> no);
-	//int obtemPosicao(No<T> no);
+	bool contemNaLista(const T elemento, No<T> * lista);
+	T * obterUltimoElemento();
+	T * obterPrimeiroElemento();
+	T * obterElementoEm(int posicao);
 
 protected:
 	int tam;
@@ -201,3 +202,81 @@ T * Lista<T>::removePrimeiroNo()
 	return info;
 }
 
+template<class T>
+bool Lista<T>::contemNaLista(const T elemento, No<T> *  lista)//procurar pessoa na lista por nome
+{
+	if (lista->proximo != nullptr) {
+		if (lista->info == elemento) {//se encontrar
+			return true;
+		}
+		else {//se nao encontrar
+			lista = lista->proximo;
+			contemNaLista(elemento, lista);
+		}
+	}
+	else {//se nao encontrar e chegar ao fim da lista retorna falso
+		return false;
+	}
+}
+
+template<class T>
+T * Lista<T>::obterUltimoElemento()
+{
+	if (this->lista->proximo != nullptr) {
+
+		this->lista->anterior = this->lista;
+
+		while (this->lista->proximo != nullptr) {
+			this->lista = this->lista_aux->proximo;
+		}
+		return this->lista->info;
+	}
+	else {
+		return lista->info;
+	}
+}
+
+template<class T>
+T * Lista<T>::obterPrimeiroElemento()
+{
+	if (lista->anterior != nullptr) {
+		this->lista->proximo = this->lista;
+
+		while (lista->anterior != nullptr)
+		{
+			this->lista = this->lista->anterior;
+		}
+		return this->lista->info;
+	}
+	else {
+		return lista->info;
+	}
+}
+
+template<class T>
+T * Lista<T>::obterElementoEm(int posicao)
+{
+	int aux = 0;
+
+	if (posicao == 0) {
+		return this->lista->info;
+	}
+
+	else if (posicao < tam) {
+		this->lista->anterior = this->lista;
+		this->lista = this->lista->proximo;
+
+				while (lista->proximo != nullptr)
+				{
+					if (aux < posicao) {
+						this->lista = this->lista->proximo;
+					}
+					aux++;
+				}
+				return this->lista->info;
+	}
+
+	else {
+		return std::string("Posicao maior que a lista!\n");
+	}
+}
