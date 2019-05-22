@@ -17,6 +17,7 @@ public:
 	bool listaVazia();//true = vazia; false = não vazia
 	void esvaziaLista();
 	bool contemNaLista(const No<T> no, No<T> * param_lista);
+	T * removeUltimoElemento()
 	//bool removerNo(const No<T> no);
 	//int obtemPosicao(No<T> no);
 

@@ -1,9 +1,10 @@
 #include <iostream>
 #include "Lista.h"
 #include "Pessoa.h"
+#include "Fila.h"
 
 int main() {
-	
+	Fila<Pessoa> * fila_pessoas = new Fila<Pessoa>;
 	No<Pessoa> * no_pessoa = new No<Pessoa>;
 	Lista<Pessoa> * listaPessoas = new Lista<Pessoa>;
 

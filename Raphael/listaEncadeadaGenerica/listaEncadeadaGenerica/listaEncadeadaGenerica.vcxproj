@@ -116,12 +116,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Lista.h" />
-    <ClInclude Include="ListaPessoas.h" />
     <ClInclude Include="No.h" />
     <ClInclude Include="Pessoa.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ListaPessoas.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
