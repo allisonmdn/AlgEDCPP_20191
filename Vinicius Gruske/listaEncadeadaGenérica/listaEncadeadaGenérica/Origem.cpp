@@ -36,19 +36,20 @@ void main()
 	listaInt.inserirEm(&i3, 1);
 	listaInt.inserirEm(&i2, 1);
 
-	for (int i = 0; i < 5; i++)
+	for (int i = -1; i < 5; i++)
 	{
-		if (listaInt.obterEm(i) == nullptr)
+		if (listaInt.obterEm(i) == NULL)
 		{
 			cout << "NULL" << endl;
 		}
 		else
 		{
-			cout << *listaInt.obterEm(i)->getConteudo() << endl;
+			cout << listaInt.obterEm(i) << "\t";
+			cout << listaInt.obterPtrEm(i) << endl;
 		}
 	}
 
-	if (listaInt.contemNaLista(&i1))
+	if (listaInt.contemNaLista(&i2))
 	{
 		cout << "Contém na Lista" << endl;
 	}

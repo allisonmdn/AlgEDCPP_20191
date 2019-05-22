@@ -15,16 +15,19 @@ public:
 	void removerFimLista();
 	void removerInicioLista();
 	void esvaziarLista();
-	Noh<T> * obterFimLista() { return fimLista; }
-	Noh<T> * obterInicioLista() { return inicioLista; }
-	Noh<T> * obterEm(int posicao);
+	T * obterPtrFimLista() { return fimLista->getConteudo(); }
+	T * obterPtrInicioLista() { return inicioLista->getConteudo(); }
+	T * obterPtrEm(int posicao);
+	T obterFimLista() { return *fimLista->getConteudo(); }
+	T obterInicioLista() { return *inicioLista->getConteudo(); }
+	T obterEm(int posicao);
 	bool listaVazia();
 	bool contemNaLista(T * conteudo);
 
 
 
 private:
-	Noh<T> * inicioLista, *listaAuxiliar, *fimLista;
+	Noh<T> *inicioLista, *listaAuxiliar, *fimLista;
 	int tamanho;
 };
 
@@ -99,7 +102,7 @@ void Lista<T>::inserirEm(T * conteudo, int posicao)
 	{
 		inserirInicioLista(conteudo);
 	}
-	else if (posicao < tamanho)
+	else if (posicao < tamanho && posicao > 0)
 	{
 		Noh<T> * noh = new Noh<T>(conteudo);
 		listaAuxiliar = inicioLista;
@@ -174,7 +177,32 @@ void Lista<T>::esvaziarLista()
 }
 
 template<class T>
-Noh<T> * Lista<T>::obterEm(int posicao)
+inline T * Lista<T>::obterPtrEm(int posicao)
+{
+	if (posicao == tamanho - 1)
+	{
+		return obterPtrFimLista();
+	}
+	else if (posicao == 0)
+	{
+		return obterPtrInicioLista();
+	}
+	else if (posicao < tamanho && posicao > 0)
+	{
+		listaAuxiliar = inicioLista;
+
+		for (int i = 0; i < posicao; i++)
+		{
+			listaAuxiliar = listaAuxiliar->getProximo();
+		}
+
+		return listaAuxiliar->getConteudo();
+	}
+	return nullptr;
+}
+
+template<class T>
+T Lista<T>::obterEm(int posicao)
 {
 	if (posicao == tamanho - 1)
 	{
@@ -184,7 +212,7 @@ Noh<T> * Lista<T>::obterEm(int posicao)
 	{
 		return obterInicioLista();
 	}
-	else if (posicao < tamanho)
+	else if (posicao < tamanho && posicao > 0)
 	{
 		listaAuxiliar = inicioLista;
 
@@ -193,9 +221,9 @@ Noh<T> * Lista<T>::obterEm(int posicao)
 			listaAuxiliar = listaAuxiliar->getProximo();
 		}
 
-		return listaAuxiliar;
+		return *listaAuxiliar->getConteudo();
 	}
-	return nullptr;
+	return NULL;
 }
 
 template<class T>
