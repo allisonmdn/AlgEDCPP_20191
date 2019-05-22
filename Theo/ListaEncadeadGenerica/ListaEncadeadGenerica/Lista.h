@@ -21,7 +21,6 @@ public:
 	T* obterUltimoElemento();
 	T* obterPrimeiroElemento();
 	T* obterElementoEm(int posicao);
-	T* mostrarElementosLista();
 	//bool removerNo(const No<T> no);
 	//int obtemPosicao(No<T> no);
 
@@ -54,7 +53,8 @@ void Lista<T>::insereFimLista(T * elemento)
 
 	if (this->lista == nullptr) { //se é vazia
 		this->lista = no;//insere o primeiro elemento
-		this->fim_lista = lista;
+		this->fim_lista = no;
+		no->anterior = nullptr;
 		this->tam++;
 	}
 	else {
@@ -80,11 +80,13 @@ void Lista<T>::inserirInicioLista(T * elemento)
 		no->proximo = lista;
 		lista = no;
 		lista->anterior = no;
+		no->anterior = nullptr;
 		tam++;
 	}
 	else { //->Se a lista tiver vazia ele já adiciona na primeira posicao
 		lista = no;
 		fim_lista = lista;
+		no->anterior = nullptr;
 		tam++;
 	}
 }
@@ -108,19 +110,24 @@ void Lista<T>::insereEm(int posicao, T * elemento)
 				//atualiza o nó
 				if (listaVazia()) {
 					insereFimLista(no);
+					fim_lista = no;
 				}
 				else {
 					if (posicao == 0) {
 						//@todo insereInicioLista ou push_front
 						no->proximo = this->lista;
 						this->lista = no;
-						lista->anterior = no;
+						no->anterior = nullptr;
 					}
 					else {
 						no->proximo = this->lista_aux;
 						no_ant->proximo = no;
 						lista_aux->anterior = no;
 						no->anterior = no_ant;
+						if (lista_aux->proximo == nullptr)
+						{
+							fim_lista = lista_aux;
+						}
 					}
 				}
 				this->tam++;
@@ -239,7 +246,7 @@ inline T * Lista<T>::obterElementoEm(int posicao)
 					}
 					else
 					{
-						//lista_aux->info;?
+						lista_aux->info;
 					}
 				}
 			}
@@ -252,26 +259,18 @@ inline T * Lista<T>::obterElementoEm(int posicao)
 	return NULL;
 }
 
-template<class T>
-inline T * Lista<T>::mostrarElementosLista()
-{
-	/*percorreLista(lista);
-	return lista;*/
-}
-
 template <class T>
-bool Lista<T>::removeUltimoNo(No<T> * lst) {
-	if (lst != nullptr) {
-		if (lst->proximo != nullptr) {
-			this->lista_aux = lst;
-			lista = lst->proximo;
+bool Lista<T>::removeUltimoNo() {
+	if (lista != nullptr) {
+		if (lista->proximo != nullptr) {
+			this->lista_aux = lista;
+			lista = lista->proximo;
 			percorreLista(lista);
-
 		}
 		else {
 			//cheguei no último elemento
 			lista_aux->proximo = nullptr; //penultimo atualiza ponteiro próximo
-			delete lst; //deleta ultimo nó
+			delete lista; //deleta ultimo nó
 			return true;
 		}
 	}
