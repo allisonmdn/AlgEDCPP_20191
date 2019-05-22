@@ -45,3 +45,21 @@ T * Fila<T>::obtemUltimoDaFila()
 {
 	return fila->obtemUltimoElemento();
 }
+
+template<class T>
+bool Fila<T>::filaVazia()
+{
+	return fila->listaVazia();
+}
+
+template<class T>
+void Fila<T>::esvaziaFila()
+{
+	fila->esvaziaLista();
+}
+
+template<class T>
+bool Fila<T>::contemNaFila(T * elemento, No<T> param_lista)
+{
+	return fila->contemNaLista(elemento, param_lista);
+}

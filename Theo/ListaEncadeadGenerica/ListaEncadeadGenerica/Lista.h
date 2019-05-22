@@ -10,7 +10,7 @@ public:
 	void percorreLista(No<T> * lista);
 	void insereFimLista(T * elemento); //@todo: modificar
 	void inserirInicioLista(T * elemento);//@todo: modificar
-	bool removeUltimoNo(No<T> * lst);
+	bool removeUltimoNo();
 	T * removePrimeiroNo();
 	void insereEm(int posicao, T * elemento); //@todo: modificar
 	int obtemTamanhoLista();
@@ -187,7 +187,7 @@ bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista
 
 	if (param_lista != nullptr) {
 		//lista_aux = lista;
-		if (param_lista->info == no.info)
+		if (param_lista->info == no->info)
 			return true;
 		else
 			return contemNaLista(elemento, param_lista->proximo);

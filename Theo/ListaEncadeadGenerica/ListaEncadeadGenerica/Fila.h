@@ -11,6 +11,9 @@ public:
 	T * obtemPrimeiroDaFila();
 	T * removerUltimoFila();
 	T * obtemUltimoDaFila();
+	bool filaVazia();//true = vazia; false = não vazia
+	void esvaziaFila();
+	bool contemNaFila(T * elemento, No<T> param_lista = this->lista);
 private:
 	Lista<T> fila = new Lista<T>;
 };
