@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Fila.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="No.h" />
     <ClInclude Include="Pessoa.h" />

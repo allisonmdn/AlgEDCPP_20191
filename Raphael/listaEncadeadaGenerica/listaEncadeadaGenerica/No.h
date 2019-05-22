@@ -7,6 +7,7 @@ public:
 	~No();
 	T * info; //informação que será armazenada
 	No<T> * proximo; //ponteiro para o próximo nó
+	No<T> * anterior;
 	
 };
 template <class T>
