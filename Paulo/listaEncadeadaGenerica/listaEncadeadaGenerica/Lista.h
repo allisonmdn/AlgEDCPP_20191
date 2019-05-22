@@ -18,6 +18,9 @@ public:
 	bool listaVazia();//true = vazia; false = não vazia
 	void esvaziaLista();
 	bool contemNaLista(const T elemento, No<T> * param_lista);
+
+
+
 	//bool removerNo(const No<T> no);
 	//int obtemPosicao(No<T> no);
 
@@ -59,8 +62,8 @@ void Lista<T>::insereFimLista(T * elemento){
 	no->info = elemento;
 	no->proximo = nullptr;
 
-	if (this->lista == nullptr) { //se é vazia
-		this->lista = no;//insere o primeiro elemento
+	if (this->lista == nullptr) {	//se é vazia
+		this->lista = no;			//insere o primeiro elemento
 		lista->anterior = nullptr;
 		lista->proximo = nullptr;
 		fim_lista = no;
