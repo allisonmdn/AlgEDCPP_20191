@@ -16,8 +16,8 @@ public:
 	int obtemTamanhoLista();
 	bool listaVazia();//true = vazia; false = não vazia
 	void esvaziaLista();
-	bool contemNaLista(const No<T> no, No<T> * param_lista);
-	T * removeUltimoElemento()
+	bool contemNaLista(const T* elemento, No<T> * param_lista = this->lista);
+	T * removeUltimoElemento();
 	//bool removerNo(const No<T> no);
 	//int obtemPosicao(No<T> no);
 
@@ -146,7 +146,7 @@ void Lista<T>::esvaziaLista()
 	}
 }
 template<class T>
-bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista)
+bool Lista<T>::contemNaLista(const T* elemento, No<T> * param_lista)
 {
 	//recebe o nó
 	//percorre a lista até encontrar o nó

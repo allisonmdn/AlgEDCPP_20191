@@ -15,7 +15,7 @@ int main() {
 	pessoa1->s_nome = "Daciolo";
 	pessoa1->i_idade = 40;
 	
-	listaPessoas->insereFimLista();
+	//listaPessoas->insereFimLista();
 	//lp_lista_pessoas->insereFimLista(pessoa1);
 	
 	Pessoa * deux = new Pessoa();
