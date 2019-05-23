@@ -11,11 +11,9 @@ public:
 	
 };
 template <class T>
-No<T>::No()
-{
+No<T>::No(){
 }
 
 template <class T>
-No<T>::~No()
-{
+No<T>::~No(){
 }

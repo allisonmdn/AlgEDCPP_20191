@@ -19,8 +19,6 @@ public:
 	void esvaziaLista();
 	bool contemNaLista(const T elemento, No<T> * param_lista);
 
-
-
 	//bool removerNo(const No<T> no);
 	//int obtemPosicao(No<T> no);
 
@@ -182,7 +180,7 @@ void Lista<T>::esvaziaLista(){
 }
 
 template<class T>
-bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista = this->lista){
+bool Lista<T>::contemNaLista(const T elemento, No<T> * param_lista){
 	//recebe o nó
 	//percorre a lista até encontrar o nó
 	//pra cada nó comparar a info que contém o tipo T, ou a informação desejada
