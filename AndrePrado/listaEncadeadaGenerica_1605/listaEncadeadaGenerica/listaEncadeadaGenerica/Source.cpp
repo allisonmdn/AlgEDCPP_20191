@@ -40,7 +40,7 @@ int main() {
 				<< "[C] - inserir pessoa no inicio da lista\n"
 				<< "[P] - inserir pessoa na posicao informada\n"
 				<< "[R] - remover o ultimo da lista\n"
-				<< "[F] - remover o primeiro da lista\n"
+				<< "[A] - remover o primeiro da lista\n"
 				<< "[T] - obter tamanho da lista\n"
 				<< "[V] - verificar se a lista esta vazia\n"
 				<< "[N] - procurar pessoa por nome\n"
@@ -100,6 +100,51 @@ int main() {
 			opcao = 'm';
 			break;
 
+		case 'r'://remover o ultimo da lista
+			listaPessoas->removeUltimoNo(no_pessoa);
+			opcao = 'm';
+			break;
+
+		case 'a':// remover o primeiro da lista
+			listaPessoas->removePrimeiroNo();
+			opcao = 'm';
+			break;
+
+		case 't'://obter tamanho da lista
+			cout << listaPessoas->obtemTamanhoLista() << "\n";
+			opcao = 'm';
+			break;
+
+		case 'v'://verificar se a lista esta vazia
+			listaPessoas->esvaziaLista();
+			opcao = 'm';
+			break;
+
+		case 'n'://procurar pessoa por nome
+			cout << "Informe o nome que deseja procurar: ";
+			cin >> nome;
+
+			if (listaPessoas->contemNaLista(nome, no_pessoa));
+			opcao = 'm';
+			break;
+
+		case 'u'://obter ultima pessoa da lista
+			cout << "Ultima pessoa da lista: " << listaPessoas->obterUltimoElemento() << "\n";
+			opcao = 'm';
+			break;
+
+		case 'i'://obeter a primeira pessoa da lista
+			cout << "Primeira pessoa da lista: " << listaPessoas->obterPrimeiroElemento() << "\n";
+			opcao = 'm';
+			break;
+
+		case 'l'://obeter pessoa de acordo com a posicao
+			cout << "Informe a possicao desejada: ";
+			cin >> aux;
+			cout << "Pessoa: " << listaPessoas->obterPrimeiroElemento() << "\n";
+			opcao = 'm';
+			break;
+
 		case 'e'://limpar tela
 			system("cls");
 			opcao = 'm';
@@ -119,6 +164,3 @@ int main() {
 	system("pause");
 	return 0;
 }
-
-
-
