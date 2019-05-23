@@ -4,16 +4,18 @@ template <class T>
 class Fila 
 {
 public:
-	Fila();
-	~Fila();
+	Fila() {};
+	~Fila() {};
 	bool inserirElementoFila(T * elemento); //true - sucesso; false - falha
 	T * removerPrimeiroFila();//Elemento - sucesso; nullptr - falha | RemoveNÛLista
 	T * obterPrimeiroFila(); //Elemento - sucessos; nullptr - falha | N„oRemoveNÛLista
 	T * removerUltimoFila(); //Elemento - sucesso; nullptr - falha | RemoveNÛLista
 	T * obterUltimoFila(); //Elemento - sucesso; nullptr - falha | N„oRemoveNÛLista
 	int obterTamanhoFila();
+	bool esvaziarFila();
+	bool vazia();
 private:
-	Lista<T> fila = new Lista<T>
+	Lista<T> * fila = new Lista<T>;
 };
 template <class T>
 bool Fila<T>::inserirElementoFila(T * elemento) {
