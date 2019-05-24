@@ -17,9 +17,10 @@ public:
 private:
 	Lista<T> * fila = new Lista<T>;
 };
+
 template <class T>
 bool Fila<T>::inserirElementoFila(T * elemento) {
-	fila->insereFimLista(elemento);
+	Lista::insereFimLista(elemento);
 	return true;
 }
 template <class T>
@@ -48,4 +49,13 @@ T * Fila<T>::obterUltimoFila() {
 template <class T>
 int Fila<T>::obterTamanhoFila() {
 	return fila->obtemTamanhoLista();
+}
+template <class T>
+bool Fila<T>::esvaziarFila() {
+	fila->esvaziaLista();
+	return true;
+}
+template <class T>
+bool Fila<T>::vazia() {
+	return fila->listaVazia();
 }
