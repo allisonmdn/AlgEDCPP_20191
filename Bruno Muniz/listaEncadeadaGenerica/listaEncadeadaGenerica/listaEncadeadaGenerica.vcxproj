@@ -119,6 +119,7 @@
     <ClInclude Include="Lista.h" />
     <ClInclude Include="No.h" />
     <ClInclude Include="Pessoa.h" />
+    <ClInclude Include="Pilha.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Pessoa.cpp" />

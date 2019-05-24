@@ -179,6 +179,7 @@ bool Lista<T>::removeUltimoNo(No<T> * lst) {
 		}
 	}
 	return false;
+;
 
 }
 

@@ -49,3 +49,16 @@ template <class T>
 int Fila<T>::obterTamanhoFila() {
 	return fila->obtemTamanhoLista();
 }
+
+template<class T>
+bool Fila<T>::esvaziarFila()
+{
+	fila->esvaziaLista();
+	return true;
+}
+
+template<class T>
+bool Fila<T>::vazia()
+{
+	return fila->listaVazia();
+}
