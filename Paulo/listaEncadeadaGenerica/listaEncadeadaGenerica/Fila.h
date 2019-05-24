@@ -18,6 +18,7 @@ public:
 private:
 	Lista<T> * fila = new Lista<T>;
 };
+
 template <class T>
 bool Fila<T>::inserirElementoFila(T * elemento) {
 	fila->insereFimLista(elemento);

@@ -14,6 +14,7 @@ int main() {
 	pessoa1 = new Pessoa;
 	pessoa1->s_nome = "Daciolo";
 	pessoa1->i_idade = 40;
+	//pilha_pessoas->empilhar(pessoa1);
 	
 	//listaPessoas->insereFimLista();
 	//lp_lista_pessoas->insereFimLista(pessoa1);
@@ -21,6 +22,9 @@ int main() {
 	Pessoa * deux = new Pessoa();
 	deux->s_nome = "DEUX";
 	deux->i_idade = 0;
+	//pilha_pessoas->empilhar(deux).
+	//std::cout << pilha_pessoas->desempilhar()->s_nome
+
 
 	std::cout << (pessoa1 == pessoa1) << std::endl;
 	
