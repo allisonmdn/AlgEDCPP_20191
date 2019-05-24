@@ -10,7 +10,7 @@ public:
 	void percorreLista(No<T> * lista);
 	void insereFimLista(T * elemento); //@todo: modificar
 	void inserirInicioLista(No<T> * no);//@todo: modificar
-	bool removeUltimoNo(No<T> * lst);
+	bool removeUltimoNo();
 	T * removePrimeiroNo();
 	void insereEm(int posicao, No<T> * no); //@todo: modificar
 	int obtemTamanhoLista();
@@ -163,22 +163,18 @@ bool Lista<T>::contemNaLista(const T* elemento, No<T> * param_lista)
 
 }
 template <class T>
-bool Lista<T>::removeUltimoNo(No<T> * lst) {
-	if (lst != nullptr) {
-		if (lst->proximo != nullptr) {
-			this->lista_aux = lst;
-			lista = lst->proximo;
-			percorreLista(lista);
-
-		}
-		else {
-			//cheguei no último elemento
-			lista_aux->proximo = nullptr; //penultimo atualiza ponteiro próximo
-			delete lst; //deleta ultimo nó
-			return true;
-		}
+T *  Lista<T>::removeUltimoNo() {
+	if (this->lista != nullptr) {
+			percorreLista(this->lista);
 	}
-	return false;
+	else {
+		//cheguei no último elemento
+		lista_aux->anterior->proximo = nullptr; //penultimo atualiza ponteiro próximo
+		T * elemento = lista_aux->info;
+		delete lista_aux; //deleta ultimo nó
+		return elemento;
+	}
+	return nullptr;
 
 }
 
