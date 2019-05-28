@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{B5B1B313-F85B-46E8-90A4-9A7B723CCED5}</ProjectGuid>
-    <RootNamespace>listaEncadeadaGenerica</RootNamespace>
+    <ProjectGuid>{D153992A-7B86-4238-881C-A57F7EE750FF}</ProjectGuid>
+    <RootNamespace>MenuSTL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,15 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Fila.h" />
-    <ClInclude Include="Lista.h" />
-    <ClInclude Include="No.h" />
-    <ClInclude Include="Pessoa.h" />
-    <ClInclude Include="Pilha.h" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Origem.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pessoa.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClInclude Include="Menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
