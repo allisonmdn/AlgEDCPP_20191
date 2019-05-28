@@ -13,6 +13,8 @@ public:
 template <class T>
 No<T>::No()
 {
+	this->proximo = nullptr;
+	this->anterior = nullptr;
 }
 
 template <class T>
