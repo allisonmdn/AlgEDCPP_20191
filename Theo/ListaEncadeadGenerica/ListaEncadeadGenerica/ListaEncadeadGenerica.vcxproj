@@ -115,10 +115,12 @@
     <ClInclude Include="Lista.h" />
     <ClInclude Include="No.h" />
     <ClInclude Include="Pessoa.h" />
+    <ClInclude Include="Pilha.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Fila.cpp" />
     <ClCompile Include="Pessoa.cpp" />
+    <ClCompile Include="Pilha.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
