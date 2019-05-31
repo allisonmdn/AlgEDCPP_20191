@@ -26,7 +26,7 @@ bool Fila<T>::inserirElementoFila(T * elemento) {
 template <class T>
 T * Fila<T>::removerPrimeiroFila() {
 	T * primElemento = fila->obterPrimeiroElemento();
-	fila->removerPrimeiroNo();
+	fila->removePrimeiroNo();
 	return primElemento;
 }
 
