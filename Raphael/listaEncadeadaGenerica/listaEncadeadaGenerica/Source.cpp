@@ -5,7 +5,7 @@
 #include "Pilha.h"
 
 int main() {
-	//Fila<Pessoa> * fila_pessoas = new Fila<Pessoa>;
+	Fila<Pessoa> * fila_pessoas = new Fila<Pessoa>;
 	//Pilha<Pessoa> * pilha_pessoas = new Pilha<Pessoa>;
 	
 	
@@ -29,7 +29,9 @@ int main() {
 	Pessoa * pessoa3 = new Pessoa();
 	pessoa3->s_nome = "Bozo";
 	pessoa3->i_idade = 0;
+
 	
+	/*
 	listaPessoas->insereFimLista(pessoa1);
 	std::cout << listaPessoas->obtemTamanhoLista() << std::endl;
 
@@ -60,6 +62,26 @@ int main() {
 	//if (listaPessoas->contemNaLista(pessoa3)) std::cout << "sim \n"; else std::cout << "não \n";
 	listaPessoas->esvaziaLista();
 	std::cout << listaPessoas->obtemTamanhoLista() << std::endl;
+	*/
+
+	/*************************
+	 *
+	 *	TESTE FILA 
+	 *
+	 ************************/
+	//INSERIR NA FILA
+	fila_pessoas->inserirElementoFila(pessoa3);
+
+	std::cout << "Primeiro da Fila => " << fila_pessoas->obterPrimeiroFila()->s_nome << std::endl;
+
+	fila_pessoas->inserirElementoFila(pessoa2);
+
+	std::cout << "Primeiro da Fila => " << fila_pessoas->obterUltimoFila()->s_nome << std::endl;
+
+	fila_pessoas->removerPrimeiroFila();
+	std::cout << "Primeiro da Fila => " << fila_pessoas->obterPrimeiroFila()->s_nome << std::endl;
+
+	//OBTER ELEMENTO DA FILA;
 
 	//pilha_pessoas->empilhar(pessoa1);
 	//listaPessoas->insereFimLista();

@@ -20,13 +20,13 @@ private:
 
 template <class T>
 bool Fila<T>::inserirElementoFila(T * elemento) {
-	Lista::insereFimLista(elemento);
+	fila->insereFimLista(elemento);
 	return true;
 }
 template <class T>
 T * Fila<T>::removerPrimeiroFila() {
 	T * primElemento = fila->obterPrimeiroElemento();
-	fila->removerPrimeiroNo();
+	fila->removePrimeiroNo();
 	return primElemento;
 }
 
