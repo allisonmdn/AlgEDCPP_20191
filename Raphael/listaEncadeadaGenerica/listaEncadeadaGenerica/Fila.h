@@ -38,7 +38,7 @@ T * Fila<T>::obterPrimeiroFila() {
 template <class T>
 T * Fila<T>::removerUltimoFila() {
 	T * ultimoElemento = fila->obterUltimoElemento();
-	fila->removerUltimoNo();
+	fila->removeUltimoNo();
 	return ultimoElemento;
 }
 
