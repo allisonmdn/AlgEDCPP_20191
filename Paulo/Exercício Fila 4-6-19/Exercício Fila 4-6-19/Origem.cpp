@@ -45,6 +45,10 @@ int main() {
 	}
 
 	cout << endl << endl << filaCarros.size() << " carros na fila.\n\n";
+
+	//for (int i = 0; i < filaCarros.size(); i++) {
+	//	cout << filaCarros.front().placa << endl;
+	//}
 	
 	system("pause");
 	return 0;
