@@ -84,7 +84,7 @@ int main() {
 	 *
 	 ************************/
 	usuarios->insereFimLista(pessoa1);
-	usuarios->insereFimLista(deux);
+	usuarios->insereInicioLista(deux);
 	usuarios->insereFimLista(pessoa2);
 	usuarios->insereFimLista(pessoa3);
 

@@ -6,6 +6,8 @@ class Pilha
 public:
 	Pilha();
 	~Pilha();
+	
+	std::queue<T> fila, fila_aux;
 	void push(T x);
 	T pop();
 	T top();
