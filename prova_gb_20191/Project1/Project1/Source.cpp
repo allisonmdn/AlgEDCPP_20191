@@ -6,7 +6,7 @@ int main() {
 
 	Lista<Pessoa> * listaPessoas = new Lista<Pessoa>;
 	Lista<Pessoa> * usuarios = new Lista<Pessoa>;
-
+	
 
 	// Definição de pessoas
 	Pessoa * pessoa1;

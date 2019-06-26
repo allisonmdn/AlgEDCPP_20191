@@ -158,13 +158,42 @@ void Lista<T>::esvaziaLista()
 template<class T>
 bool Lista<T>::contemNaLista(const T* elemento)
 {
-	return false;
+	if (!this->listaVazia() && elemento != nullptr) {
+		for (int i = 0; i < this->obtemTamanhoLista(); i++) {
+			if (this->obterElementoEm(i) == elemento) {
+				return true;
+			}
+		}
+		return false;
+	}
+	else {
+		return false;
+	}
 }
 
 template<class T>
 inline bool Lista<T>::comparaLista(Lista<T>* lista_comparar)
 {
-	return false;
+	if (lista_comparar != nullptr)
+	{
+		if (!lista_comparar->listaVazia() && !this->listaVazia()) {
+			if (this->obtemTamanhoLista() == lista_comparar->obtemTamanhoLista()) {
+				for (int i = 0; i < this->obtemTamanhoLista(); i++) {
+					if (this->obterElementoEm(i) != lista_comparar->obterElementoEm(i)) {
+						return false;
+					}
+				}
+				return true;
+			}
+			return false;
+		}
+		else {
+			return false;
+		}
+	}
+	else {
+		return false;
+	}
 }
 
 template<class T>
